@@ -1,7 +1,7 @@
 
 exports.seed = function(knex, Promise) {
   // Deletes ALL existing entries
-  return knex('species').del()
+  return knex('species').truncate()
     .then(function () {
       // Inserts seed entries
       return knex('species').insert([
@@ -12,7 +12,9 @@ exports.seed = function(knex, Promise) {
         { name: "Blue-footed Booby" }, 
         { name: "Anteater" }, 
         { name: "Minotaur" }, 
-        { name: "Raccoon" }
+        { name: "Raccoon" },
+        {name: 'Flamingo'},
+        {name: 'cuckabara'},
       ]);
     });
 };
